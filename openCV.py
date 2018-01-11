@@ -24,7 +24,7 @@ def showImage():
         cv2.destroyAllWindows()
     elif k == ord('c'): #ord함수는 문자를 아스키 값으로 반환하는 함수이다. / c를 누르면 복사본 저장
         cv2.imwrite('images/model_copy.jpg', img)#이미지 복사본을 저장하는 함수
-        cv2.destroyAllWindows()
+        cv2.destroyAllWindows()#이미지 창을 닫는다.
 
 
 showImage()

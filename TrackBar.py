@@ -19,7 +19,7 @@ def trackbar():
         cv2.imshow('color_palette', img)
         k = cv2.waitKey(1) & 0xFF
 
-        if k == 27:
+        if k == 27
             break
 
         b = cv2.getTrackbarPos('B', 'color_palette')

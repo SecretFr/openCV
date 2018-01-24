@@ -13,12 +13,14 @@ def convex():
     cnt = contours[4]
 
     (x,y), r = cv2.minEnclosingCircle(cnt)
+    #contour에 외접하는 원을 얻기 위해 사용. 리턴값은 원의 중심 좌표와 반지름
     center = (int(x), int(y))
     r = int(r)
 
     cv2.circle(img, center, r, (255, 0, 0), 3)
 
     ellipse = cv2.fitEllipse(cnt)
+    #contour를 최적으로 둘러싸는 타원을 얻기 위해 사용된다.
     cv2.ellipse(img, ellipse, (0, 255, 0), 3)
 
     [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)

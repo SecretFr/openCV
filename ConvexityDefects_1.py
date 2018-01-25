@@ -14,6 +14,7 @@ def contour():
     cv2.drawContours(img, [hull], 0, (0, 0, 255), 2)
 
     hull = cv2.convexHull(cnt, returnPoints=False)
+    #contour와 convexHull이 만나는 부분의 contour 인덱스를 리턴
     defects = cv2.convexityDefects(cnt, hull)
 
     for i in range(defects.shape[0]):
